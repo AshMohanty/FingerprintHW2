@@ -27,7 +27,7 @@ fpPromise
 
 //helper functions to store and retreive id from backend store
 function setVisitorId(id) {
-    Url = "http://localhost:8081/api/visitors/"+id;
+    Url = "https://fingerprint-server.vercel.app/api/visitors/"+id;
     //alert(Url)
 
     $.get(Url, function(data,status){
@@ -39,7 +39,7 @@ function setVisitorId(id) {
 }
 
 function addVisitoridToBackend(id) {
-    Url = "http://localhost:8081/api/visitors";
+    Url = "https://fingerprint-server.vercel.app/api/visitors";
     body = {'visitorid':id,'accountid':'42343'};
 
     $.ajax({
